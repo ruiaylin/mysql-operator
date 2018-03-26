@@ -1,0 +1,8 @@
+apiVersion: cr.mysqloperator.grtl.github.com/v1
+kind: MySQLBackup
+metadata:
+  name: {{ .Name }}
+spec:
+  cluster: {{ .ClusterName }}
+  time: "{{ .Time }}"
+  storage: {{ .Storage }}

@@ -2,7 +2,9 @@
 // sources:
 // artifacts/backup-crd.yaml
 // artifacts/backup-cronjob.yaml
+// artifacts/backup-cr.yaml
 // artifacts/backup-pvc.yaml
+// artifacts/backup-schedule.yaml
 // artifacts/mysql-configmap.yaml
 // artifacts/mysql-crd.yaml
 // artifacts/mysql-service-read.yaml
@@ -115,6 +117,26 @@ func artifactsBackupCronjobYaml() (*asset, error) {
 	return a, nil
 }
 
+var _artifactsBackupCrYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8c\xc1\x0a\xc2\x30\x10\x44\xef\xf9\x8a\xa5\x1f\x10\xf1\x9a\xa3\x5e\x55\x90\x8a\xf7\x35\x5d\xea\xd2\xa6\x89\x9b\xad\x50\x4a\xfe\x5d\x6a\xf4\xf8\xe6\xcd\x0c\x26\xbe\x93\x64\x8e\x93\x03\x2f\x36\x2c\xf9\x35\xc6\x44\x82\x1a\xc5\xf6\xa2\xa3\xed\x59\x9f\xf3\xc3\xfa\x18\x76\xef\xbd\x19\x78\xea\x1c\x9c\x97\xf6\x7a\x3a\xa0\x1f\xe6\x64\x02\x29\x76\xa8\xe8\x0c\xc0\x84\x81\x1c\xac\x2b\xd8\x0b\x06\x82\x52\x4c\x4e\xe4\x37\xe3\xc7\x39\x2b\x49\x95\xc7\x0a\xff\x0e\x80\xf2\xb6\x6b\x36\x77\xe3\x6f\xd8\x18\x80\xac\x51\xb0\xff\x1d\xb6\x15\xa0\x94\x4f\x00\x00\x00\xff\xff\xb7\xdd\x13\xa3\xb3\x00\x00\x00")
+
+func artifactsBackupCrYamlBytes() ([]byte, error) {
+	return bindataRead(
+		_artifactsBackupCrYaml,
+		"artifacts/backup-cr.yaml",
+	)
+}
+
+func artifactsBackupCrYaml() (*asset, error) {
+	bytes, err := artifactsBackupCrYamlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "artifacts/backup-cr.yaml", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
 var _artifactsBackupPvcYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8d\x31\x8a\xc3\x30\x10\x45\x7b\x9d\xe2\x5f\x60\x0d\xdb\xaa\x75\xed\xc5\xac\xc1\xa9\x07\xe9\x13\x44\x2c\xc9\xd1\xc8\x81\x60\x7c\xf7\xa0\x38\x69\x06\xde\xfc\x07\xef\x16\x92\xb7\x18\x59\x34\x68\x65\xaa\x73\x5e\xb6\xc8\x7e\x91\x10\x8d\xac\x61\x6e\x43\x4e\x16\x8f\x5f\x13\x59\xc5\x4b\x15\x6b\x80\x24\x91\x16\xfb\x8e\x71\xee\xff\x24\x12\xdd\xfb\x1e\x87\xd1\x95\xae\x19\xe2\x1c\x55\x87\xec\xa9\x0d\x81\x1f\xfc\x53\xfc\xa5\x84\xca\x41\xd2\xd3\x00\x85\x9a\xb7\xe2\xbe\x42\xe1\x7d\xa3\xd6\x0f\x01\x5a\x73\x91\xeb\x99\xe9\xa6\x95\xae\x9b\xce\x4f\xcb\xbc\x02\x00\x00\xff\xff\x31\xd3\xda\x23\xb8\x00\x00\x00")
 
 func artifactsBackupPvcYamlBytes() ([]byte, error) {
@@ -131,6 +153,26 @@ func artifactsBackupPvcYaml() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "artifacts/backup-pvc.yaml", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _artifactsBackupScheduleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x94\x8e\x4f\x4b\xc4\x30\x10\xc5\xef\xf9\x14\x8f\x1e\x17\x36\x4b\xaf\x3d\xaa\x20\x82\x0a\x2a\x7a\x9f\x4d\xc7\x1a\xb6\x49\xea\x64\xa2\x94\xa5\xdf\x5d\x62\x3c\x88\x37\x99\xdb\xfb\xcd\xfb\x43\x8b\x7f\x61\xc9\x3e\xc5\x01\x4e\x6c\x58\xf3\xfb\x9c\x16\x16\xd2\x24\x76\x12\x9d\xed\xe4\xf5\xad\x1c\xad\x4b\xe1\xf0\xd1\x9b\x93\x8f\xe3\x80\xbb\xf5\xe9\xe1\xf6\x82\xdc\xa9\x2c\x26\xb0\xd2\x48\x4a\x83\x01\x22\x05\x1e\x10\xd6\xfd\xb1\x31\x20\x7d\x46\x96\x47\x7e\x65\xe1\xe8\x38\xd7\x27\x60\x8f\x5f\x31\x97\x73\xc9\xca\xf2\x0d\x80\xff\xee\x69\xae\xd6\x7b\x3e\xc3\xde\x53\x60\x6c\xdb\x8f\x5e\xfc\xd8\xe4\xe7\x9b\xab\xaa\xe6\x85\x5d\x9d\xe0\x5a\xe7\x5f\x8b\xfa\x1a\xd3\xed\x0e\x3d\x76\xed\x3a\x03\x64\x4d\x42\x53\x05\xfd\xb5\xef\xcc\x57\x00\x00\x00\xff\xff\x07\xb3\x5a\x77\x32\x01\x00\x00")
+
+func artifactsBackupScheduleYamlBytes() ([]byte, error) {
+	return bindataRead(
+		_artifactsBackupScheduleYaml,
+		"artifacts/backup-schedule.yaml",
+	)
+}
+
+func artifactsBackupScheduleYaml() (*asset, error) {
+	bytes, err := artifactsBackupScheduleYamlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "artifacts/backup-schedule.yaml", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -289,7 +331,9 @@ func AssetNames() []string {
 var _bindata = map[string]func() (*asset, error){
 	"artifacts/backup-crd.yaml":         artifactsBackupCrdYaml,
 	"artifacts/backup-cronjob.yaml":     artifactsBackupCronjobYaml,
+	"artifacts/backup-cr.yaml":          artifactsBackupCrYaml,
 	"artifacts/backup-pvc.yaml":         artifactsBackupPvcYaml,
+	"artifacts/backup-schedule.yaml":    artifactsBackupScheduleYaml,
 	"artifacts/mysql-configmap.yaml":    artifactsMysqlConfigmapYaml,
 	"artifacts/mysql-crd.yaml":          artifactsMysqlCrdYaml,
 	"artifacts/mysql-service-read.yaml": artifactsMysqlServiceReadYaml,
@@ -339,9 +383,11 @@ type bintree struct {
 
 var _bintree = &bintree{nil, map[string]*bintree{
 	"artifacts": {nil, map[string]*bintree{
+		"backup-cr.yaml":          {artifactsBackupCrYaml, map[string]*bintree{}},
 		"backup-crd.yaml":         {artifactsBackupCrdYaml, map[string]*bintree{}},
 		"backup-cronjob.yaml":     {artifactsBackupCronjobYaml, map[string]*bintree{}},
 		"backup-pvc.yaml":         {artifactsBackupPvcYaml, map[string]*bintree{}},
+		"backup-schedule.yaml":    {artifactsBackupScheduleYaml, map[string]*bintree{}},
 		"mysql-configmap.yaml":    {artifactsMysqlConfigmapYaml, map[string]*bintree{}},
 		"mysql-crd.yaml":          {artifactsMysqlCrdYaml, map[string]*bintree{}},
 		"mysql-service-read.yaml": {artifactsMysqlServiceReadYaml, map[string]*bintree{}},
